@@ -28,7 +28,7 @@ function calculateAge(birthDate: Date): number {
   return age;
 }
 
-function App() {
+export function App() {
   const birthDate = new Date(1995, 2, 3); // Month is 0-based, so 2 = March
   const age = calculateAge(birthDate);
 
@@ -394,5 +394,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
