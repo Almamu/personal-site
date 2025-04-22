@@ -1,9 +1,13 @@
+import { SiNextdotjs, SiNextdotjsHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
+
+import { LabelBase } from "./LabelBase.tsx";
 
 export function NextJS({ children }: PropsWithChildren) {
   return (
-    <li className="inline px-2 py-1 bg-white backdrop-blur-sm rounded text-sm text-black">
+    <LabelBase style={{ background: SiNextdotjsHex }} className="text-white">
+      <SiNextdotjs />
       {children}
-    </li>
+    </LabelBase>
   );
 }

@@ -1,12 +1,13 @@
+import { SiLaravel, SiLaravelHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
+
+import { LabelBase } from "./LabelBase.tsx";
 
 export function Laravel({ children }: PropsWithChildren) {
   return (
-    <li
-      style={{ background: "rgb(245, 48, 3)" }}
-      className="inline px-2 py-1 backdrop-blur-sm rounded text-sm text-white"
-    >
+    <LabelBase style={{ background: SiLaravelHex }} className="text-white">
+      <SiLaravel />
       {children}
-    </li>
+    </LabelBase>
   );
 }

@@ -1,12 +1,13 @@
+import { SiPhp, SiPhpHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
+
+import { LabelBase } from "./LabelBase.tsx";
 
 export function PHP({ children }: PropsWithChildren) {
   return (
-    <li
-      style={{ background: "rgb(79, 91, 147)" }}
-      className="inline px-2 py-1 backdrop-blur-sm rounded text-sm text-white"
-    >
+    <LabelBase style={{ background: SiPhpHex }} className="text-white">
+      <SiPhp />
       {children}
-    </li>
+    </LabelBase>
   );
 }

@@ -1,12 +1,13 @@
+import { SiPython, SiPythonHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
+
+import { LabelBase } from "./LabelBase.tsx";
 
 export function Python({ children }: PropsWithChildren) {
   return (
-    <li
-      style={{ background: "#ffd342" }}
-      className="inline px-2 py-1 backdrop-blur-sm rounded text-sm text-black"
-    >
+    <LabelBase style={{ background: SiPythonHex }} className="text-black">
+      <SiPython />
       {children}
-    </li>
+    </LabelBase>
   );
 }

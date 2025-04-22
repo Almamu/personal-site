@@ -1,12 +1,13 @@
+import { SiLinux, SiLinuxHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
+
+import { LabelBase } from "./LabelBase.tsx";
 
 export function Linux({ children }: PropsWithChildren) {
   return (
-    <li
-      style={{ background: "#ffbb03" }}
-      className="inline px-2 py-1 backdrop-blur-sm rounded text-sm text-black"
-    >
+    <LabelBase style={{ background: SiLinuxHex }} className="text-black">
+      <SiLinux />
       {children}
-    </li>
+    </LabelBase>
   );
 }

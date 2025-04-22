@@ -1,8 +1,8 @@
+import { SiGithub } from "@icons-pack/react-simple-icons";
 import {
   Briefcase,
   Code2,
   ExternalLink,
-  Github,
   Linkedin,
   Mail,
   User,
@@ -10,14 +10,18 @@ import {
 
 import { Angular } from "./components/LanguageLabels/Angular.tsx";
 import { C } from "./components/LanguageLabels/C.tsx";
+import { CloudFlare } from "./components/LanguageLabels/CloudFlare.tsx";
 import { CPlusPlus } from "./components/LanguageLabels/CPlusPlus.tsx";
 import { CSharp } from "./components/LanguageLabels/CSharp.tsx";
+import { DotNet } from "./components/LanguageLabels/DotNet.tsx";
 import { Expo } from "./components/LanguageLabels/Expo.tsx";
+import { Git } from "./components/LanguageLabels/Git.tsx";
 import { LanguageLabelContainer } from "./components/LanguageLabels/LanguageLabelContainer.tsx";
 import { Laravel } from "./components/LanguageLabels/Laravel.tsx";
 import { Linux } from "./components/LanguageLabels/Linux.tsx";
 import { NextJS } from "./components/LanguageLabels/NextJS.tsx";
 import { NodeJS } from "./components/LanguageLabels/NodeJS.tsx";
+import { OpenGL } from "./components/LanguageLabels/OpenGL.tsx";
 import { Other } from "./components/LanguageLabels/Other.tsx";
 import { PHP } from "./components/LanguageLabels/PHP.tsx";
 import { Python } from "./components/LanguageLabels/Python.tsx";
@@ -25,6 +29,7 @@ import { React } from "./components/LanguageLabels/React.tsx";
 import { ReactNative } from "./components/LanguageLabels/ReactNative.tsx";
 import { SQL } from "./components/LanguageLabels/SQL.tsx";
 import { TypeScript } from "./components/LanguageLabels/TypeScript.tsx";
+import { Unity } from "./components/LanguageLabels/Unity.tsx";
 import { VueJS } from "./components/LanguageLabels/VueJS.tsx";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
@@ -60,7 +65,7 @@ export function App() {
       image_fill: "object-cover",
       technologies: [
         <CPlusPlus>C++</CPlusPlus>,
-        <Other>OpenGL</Other>,
+        <OpenGL>OpenGL</OpenGL>,
         <Linux>Linux</Linux>,
       ],
       link: "https://github.com/Almamu/linux-wallpaperengine",
@@ -75,7 +80,7 @@ export function App() {
       image_fill: "object-contain",
       technologies: [
         <CSharp>C#</CSharp>,
-        <CSharp>.NET</CSharp>,
+        <DotNet>.NET</DotNet>,
         <Other>Networking</Other>,
       ],
       link: "https://github.com/Almamu/EVESharp",
@@ -110,7 +115,7 @@ export function App() {
       technologies: [
         <Other>Game Development</Other>,
         <Other>Voxel-like</Other>,
-        <Other>Unity</Other>,
+        <Unity>Unity</Unity>,
       ],
       link: "https://almamu.itch.io/a-bird-in-hand-is-worth-hundreds-in-the-bush",
     },
@@ -157,7 +162,7 @@ export function App() {
                 rel="noopener noreferrer"
                 className="p-2 hover:text-blue-400 transition-colors"
               >
-                <Github size={24} />
+                <SiGithub size={24} />
               </a>
               <a
                 href="https://linkedin.com/in/almamu"
@@ -186,7 +191,7 @@ export function App() {
             Technical Stack
           </h2>
           <div className="flex flex-wrap gap-4">
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <span className="text-blue-400 font-semibold">Frontend</span>
               <LanguageLabelContainer>
                 <React>React 19</React>
@@ -195,7 +200,7 @@ export function App() {
                 <TypeScript>TypeScript</TypeScript>
               </LanguageLabelContainer>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <span className="text-blue-400 font-semibold">Backend</span>
               <LanguageLabelContainer>
                 <PHP>PHP 8</PHP>
@@ -203,7 +208,7 @@ export function App() {
                 <NodeJS>NodeJS</NodeJS>
               </LanguageLabelContainer>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <span className="text-blue-400 font-semibold">Fullstack</span>
               <LanguageLabelContainer>
                 <Expo>Expo</Expo>
@@ -211,9 +216,10 @@ export function App() {
                 <NextJS>NextJS</NextJS>
               </LanguageLabelContainer>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <span className="text-blue-400 font-semibold">Other skills</span>
               <LanguageLabelContainer>
+                <Git>GIT</Git>
                 <C>C</C>
                 <CPlusPlus>C++</CPlusPlus>
                 <CSharp>C#</CSharp>
@@ -221,6 +227,8 @@ export function App() {
                 <Linux>Linux</Linux>
                 <SQL>SQL</SQL>
                 <Other>Reverse Engineering</Other>
+                <Unity>Unity</Unity>
+                <CloudFlare>Cloudflare</CloudFlare>
               </LanguageLabelContainer>
             </div>
           </div>

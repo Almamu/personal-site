@@ -1,12 +1,13 @@
+import { SiReact, SiReactHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
+
+import { LabelBase } from "./LabelBase.tsx";
 
 export function React({ children }: PropsWithChildren) {
   return (
-    <li
-      style={{ background: "rgb(88 196 220)" }}
-      className="inline px-2 py-1 backdrop-blur-sm rounded text-sm text-black"
-    >
+    <LabelBase style={{ background: SiReactHex }} className="text-black">
+      <SiReact />
       {children}
-    </li>
+    </LabelBase>
   );
 }

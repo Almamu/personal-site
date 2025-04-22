@@ -1,17 +1,17 @@
-import { SiVuedotjs } from "@icons-pack/react-simple-icons";
+import { SiCloudflare, SiCloudflareHex } from "@icons-pack/react-simple-icons";
 import { PropsWithChildren } from "react";
 
 import { LabelBase } from "./LabelBase.tsx";
 
-export function VueJS({ children }: PropsWithChildren) {
+export function CloudFlare({ children }: PropsWithChildren) {
   return (
     <LabelBase
       style={{
-        backgroundImage: "linear-gradient(315deg,#42d392 25%,#647eff)",
+        background: SiCloudflareHex,
       }}
       className="text-black"
     >
-      <SiVuedotjs />
+      <SiCloudflare />
       {children}
     </LabelBase>
   );
