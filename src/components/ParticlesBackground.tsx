@@ -33,7 +33,7 @@ export function ParticlesBackground({
             value: "transparent",
           },
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         particles: {
           color: {
             value: "#4B5563",

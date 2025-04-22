@@ -1,7 +1,6 @@
 import {
   Briefcase,
   Code2,
-  Coffee,
   ExternalLink,
   Github,
   Linkedin,
@@ -9,6 +8,24 @@ import {
   User,
 } from "lucide-react";
 
+import { Angular } from "./components/LanguageLabels/Angular.tsx";
+import { C } from "./components/LanguageLabels/C.tsx";
+import { CPlusPlus } from "./components/LanguageLabels/CPlusPlus.tsx";
+import { CSharp } from "./components/LanguageLabels/CSharp.tsx";
+import { Expo } from "./components/LanguageLabels/Expo.tsx";
+import { LanguageLabelContainer } from "./components/LanguageLabels/LanguageLabelContainer.tsx";
+import { Laravel } from "./components/LanguageLabels/Laravel.tsx";
+import { Linux } from "./components/LanguageLabels/Linux.tsx";
+import { NextJS } from "./components/LanguageLabels/NextJS.tsx";
+import { NodeJS } from "./components/LanguageLabels/NodeJS.tsx";
+import { Other } from "./components/LanguageLabels/Other.tsx";
+import { PHP } from "./components/LanguageLabels/PHP.tsx";
+import { Python } from "./components/LanguageLabels/Python.tsx";
+import { React } from "./components/LanguageLabels/React.tsx";
+import { ReactNative } from "./components/LanguageLabels/ReactNative.tsx";
+import { SQL } from "./components/LanguageLabels/SQL.tsx";
+import { TypeScript } from "./components/LanguageLabels/TypeScript.tsx";
+import { VueJS } from "./components/LanguageLabels/VueJS.tsx";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
 const email = "mailto:contact@alma.mu";
@@ -41,7 +58,11 @@ export function App() {
       image:
         "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=60",
       image_fill: "object-cover",
-      technologies: ["C++", "OpenGL", "Linux"],
+      technologies: [
+        <CPlusPlus>C++</CPlusPlus>,
+        <Other>OpenGL</Other>,
+        <Linux>Linux</Linux>,
+      ],
       link: "https://github.com/Almamu/linux-wallpaperengine",
     },
     {
@@ -52,7 +73,11 @@ export function App() {
       image:
         "https://raw.githubusercontent.com/wiki/Almamu/EVESharp/assets/EVESharp.png",
       image_fill: "object-contain",
-      technologies: ["C#", ".NET", "Networking"],
+      technologies: [
+        <CSharp>C#</CSharp>,
+        <CSharp>.NET</CSharp>,
+        <Other>Networking</Other>,
+      ],
       link: "https://github.com/Almamu/EVESharp",
     },
     {
@@ -63,7 +88,12 @@ export function App() {
       image:
         "https://raw.githubusercontent.com/Almamu/MangaSekaiProject-Frontend/refs/heads/expo-rewrite/assets/images/mangasekai-logo.png",
       image_fill: "object-cover",
-      technologies: ["React Native", "Expo", "Laravel", "PHP"],
+      technologies: [
+        <ReactNative>React Native</ReactNative>,
+        <Expo>Expo</Expo>,
+        <PHP>PHP 8</PHP>,
+        <Laravel>Laravel</Laravel>,
+      ],
       links: {
         frontend:
           "https://github.com/Almamu/MangaSekaiProject-Frontend/tree/expo-rewrite",
@@ -77,7 +107,11 @@ export function App() {
         "A game created for GitHub's GameOff 2022 themed 'cliché'. Based on the Spanish proverb, this action-adventure deliberately embraces Hollywood tropes like 'America saves the world' and 'you're our last hope' for a uniquely satirical experience.",
       image: "images/bird.png",
       image_fill: "object-cover",
-      technologies: ["Game Development", "Pixel Art"],
+      technologies: [
+        <Other>Game Development</Other>,
+        <Other>Voxel-like</Other>,
+        <Other>Unity</Other>,
+      ],
       link: "https://almamu.itch.io/a-bird-in-hand-is-worth-hundreds-in-the-bush",
     },
   ];
@@ -85,7 +119,7 @@ export function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       {/* Hero Section */}
-      <header className="container mx-auto px-6 py-16 md:py-32 relative overflow-hidden">
+      <header className="container mx-auto px-6 py-10 md:py-16 relative overflow-hidden">
         <ParticlesBackground className="opacity-50" />
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-400 flex-shrink-0">
@@ -99,10 +133,10 @@ export function App() {
             <span className="text-lg text-gray-400 text-opacity-40">
               @Almamu
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-3">
               Hi, I'm <span className="text-blue-400">Alexis</span>
             </h1>
-            <div className="mb-6">
+            <div>
               <p className="text-xl md:text-2xl text-gray-300 mb-2">
                 Senior Fullstack Developer at{" "}
                 <a
@@ -116,6 +150,7 @@ export function App() {
               </p>
             </div>
             <div className="flex gap-4 justify-center md:justify-start">
+              <span className="py-2">Get in touch with me on:</span>
               <a
                 href="https://github.com/Almamu"
                 target="_blank"
@@ -143,6 +178,55 @@ export function App() {
         </div>
       </header>
 
+      {/* Technical Stack Section */}
+      <section className="bg-blue-950/20 py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
+            <Code2 size={24} className="text-blue-400" />
+            Technical Stack
+          </h2>
+          <div className="flex flex-wrap gap-4">
+            <div className="flex gap-2">
+              <span className="text-blue-400 font-semibold">Frontend</span>
+              <LanguageLabelContainer>
+                <React>React 19</React>
+                <Angular>Angular 19</Angular>
+                <VueJS>VueJS</VueJS>
+                <TypeScript>TypeScript</TypeScript>
+              </LanguageLabelContainer>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-blue-400 font-semibold">Backend</span>
+              <LanguageLabelContainer>
+                <PHP>PHP 8</PHP>
+                <Laravel>Laravel</Laravel>
+                <NodeJS>NodeJS</NodeJS>
+              </LanguageLabelContainer>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-blue-400 font-semibold">Fullstack</span>
+              <LanguageLabelContainer>
+                <Expo>Expo</Expo>
+                <ReactNative>React Native</ReactNative>
+                <NextJS>NextJS</NextJS>
+              </LanguageLabelContainer>
+            </div>
+            <div className="flex gap-2">
+              <span className="text-blue-400 font-semibold">Other skills</span>
+              <LanguageLabelContainer>
+                <C>C</C>
+                <CPlusPlus>C++</CPlusPlus>
+                <CSharp>C#</CSharp>
+                <Python>Python</Python>
+                <Linux>Linux</Linux>
+                <SQL>SQL</SQL>
+                <Other>Reverse Engineering</Other>
+              </LanguageLabelContainer>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="bg-gray-800/50 py-20">
         <div className="container mx-auto px-6">
@@ -151,7 +235,7 @@ export function App() {
             About Me
           </h2>
           <div className="grid grid-cols-1 items-center gap-12">
-            <div className="w-1/2">
+            <div className="">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 My journey into software development began with a deep passion
                 for video games in my early years. What started as curiosity
@@ -163,135 +247,6 @@ export function App() {
                 has given me a unique perspective on user experience and
                 performance optimization.
               </p>
-            </div>
-            <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                <Code2 className="text-blue-400" />
-                Technical Skills
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">
-                    Systems Programming
-                  </h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      C/C++
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      C#
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">
-                    Web Technologies
-                  </h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      PHP
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      React
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Angular
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      TypeScript
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">
-                    Mobile & Framework
-                  </h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Next.js
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      React Native
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Expo
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">
-                    Specialized Skills
-                  </h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Reverse Engineering
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                <Coffee className="text-blue-400" />
-                Interests & Hobbies
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">Development</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Open Source Contribution
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Game Development
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">Entertainment</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Gaming
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Anime
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Manga
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-blue-400 font-semibold">
-                    Sports & Activities
-                  </h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Airsoft
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Karting
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -322,16 +277,9 @@ export function App() {
                   </h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
-                    <div className="flex gap-2 flex-wrap">
-                      {project.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-gray-700/50 backdrop-blur-sm rounded text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <LanguageLabelContainer>
+                      {project.technologies}
+                    </LanguageLabelContainer>
                     {"links" in project ? (
                       <div className="flex gap-2">
                         <a
@@ -366,25 +314,6 @@ export function App() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="bg-gray-800/50 backdrop-blur-sm py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-8">Let's Work Together</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'm currently open to new opportunities and collaborations. Feel
-            free to reach out if you'd like to discuss a project or just say
-            hello!
-          </p>
-          <a
-            href={email}
-            className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
-          >
-            <Mail size={20} />
-            Get in Touch
-          </a>
         </div>
       </section>
 

@@ -1,0 +1,12 @@
+import { PropsWithChildren } from "react";
+
+export function Python({ children }: PropsWithChildren) {
+  return (
+    <li
+      style={{ background: "#ffd342" }}
+      className="inline px-2 py-1 backdrop-blur-sm rounded text-sm text-black"
+    >
+      {children}
+    </li>
+  );
+}
