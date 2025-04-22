@@ -96,8 +96,11 @@ export function App() {
             />
           </div>
           <div className="max-w-3xl text-center md:text-left">
+            <span className="text-lg text-gray-400 text-opacity-40">
+              @Almamu
+            </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-blue-400">Almamu</span>
+              Hi, I'm <span className="text-blue-400">Alexis</span>
             </h1>
             <div className="mb-6">
               <p className="text-xl md:text-2xl text-gray-300 mb-2">
@@ -150,15 +153,15 @@ export function App() {
           <div className="grid grid-cols-1 items-center gap-12">
             <div className="w-1/2">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                At {age}, my journey into software development began with a deep
-                passion for video games in my early years. What started as
-                curiosity about how games worked evolved into a fascination with
-                programming and software development. Today, with over 5 years
-                of professional experience, I channel that same enthusiasm into
-                creating scalable applications and solving complex technical
-                challenges. My background in game development has given me a
-                unique perspective on user experience and performance
-                optimization.
+                My journey into software development began with a deep passion
+                for video games in my early years. What started as curiosity
+                about how games worked evolved into a fascination with
+                programming and software development in general. Today at {age},
+                with over 7 years of professional experience, I channel that
+                same enthusiasm into creating scalable applications and solving
+                complex technical challenges. My background in game development
+                has given me a unique perspective on user experience and
+                performance optimization.
               </p>
             </div>
             <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
