@@ -111,10 +111,6 @@ function App() {
                   CONVOTIS Iberia
                 </a>
               </p>
-              <p className="text-lg text-gray-400">
-                Transforming ideas into elegant solutions through code and
-                creativity
-              </p>
             </div>
             <div className="flex gap-4 justify-center md:justify-start">
               <a
@@ -151,148 +147,146 @@ function App() {
             <User className="text-blue-400" />
             About Me
           </h2>
-          <div className="max-w-3xl">
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              At {age}, my journey into software development began with a deep
-              passion for video games in my early years. What started as
-              curiosity about how games worked evolved into a fascination with
-              programming and software development. Today, with over 5 years of
-              professional experience, I channel that same enthusiasm into
-              creating scalable applications and solving complex technical
-              challenges. My background in game development has given me a
-              unique perspective on user experience and performance
-              optimization.
-            </p>
-            <div className="grid grid-cols-1 gap-8 mt-12">
-              <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                  <Code2 className="text-blue-400" />
-                  Technical Skills
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">
-                      Systems Programming
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        C/C++
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        C#
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">
-                      Web Technologies
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        PHP
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        React
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Angular
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        TypeScript
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">
-                      Mobile & Framework
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Next.js
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        React Native
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Expo
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">
-                      Specialized Skills
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Reverse Engineering
-                      </li>
-                    </ul>
-                  </div>
+          <div className="grid grid-cols-1 items-center gap-12">
+            <div className="w-1/2">
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                At {age}, my journey into software development began with a deep
+                passion for video games in my early years. What started as
+                curiosity about how games worked evolved into a fascination with
+                programming and software development. Today, with over 5 years
+                of professional experience, I channel that same enthusiasm into
+                creating scalable applications and solving complex technical
+                challenges. My background in game development has given me a
+                unique perspective on user experience and performance
+                optimization.
+              </p>
+            </div>
+            <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <Code2 className="text-blue-400" />
+                Technical Skills
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">
+                    Systems Programming
+                  </h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      C/C++
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      C#
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">
+                    Web Technologies
+                  </h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      PHP
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      React
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Angular
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      TypeScript
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">
+                    Mobile & Framework
+                  </h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Next.js
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      React Native
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Expo
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">
+                    Specialized Skills
+                  </h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Reverse Engineering
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                  <Coffee className="text-blue-400" />
-                  Interests & Hobbies
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">Development</h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Open Source Contribution
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Game Development
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">
-                      Entertainment
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Gaming
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Anime
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Manga
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="text-blue-400 font-semibold">
-                      Sports & Activities
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Airsoft
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Karting
-                      </li>
-                    </ul>
-                  </div>
+            </div>
+            <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <Coffee className="text-blue-400" />
+                Interests & Hobbies
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">Development</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Open Source Contribution
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Game Development
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">Entertainment</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Gaming
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Anime
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Manga
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-blue-400 font-semibold">
+                    Sports & Activities
+                  </h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Airsoft
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Karting
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
