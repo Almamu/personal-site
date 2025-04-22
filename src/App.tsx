@@ -40,6 +40,7 @@ function App() {
         "A native Linux implementation of Wallpaper Engine, bringing animated wallpapers to Linux desktop environments. Built with C++ and modern OpenGL.",
       image:
         "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=60",
+      image_fill: "object-cover",
       technologies: ["C++", "OpenGL", "Linux"],
       link: "https://github.com/Almamu/linux-wallpaperengine",
     },
@@ -50,6 +51,7 @@ function App() {
         "A C# implementation of EVE Online server, enabling private server development and game preservation. Features network protocol implementation and game logic.",
       image:
         "https://raw.githubusercontent.com/wiki/Almamu/EVESharp/assets/EVESharp.png",
+      image_fill: "object-contain",
       technologies: ["C#", ".NET", "Networking"],
       link: "https://github.com/Almamu/EVESharp",
     },
@@ -60,6 +62,7 @@ function App() {
         "A comprehensive manga reader platform split into two components: a React Native/Expo frontend for cross-platform reading, and a Laravel PHP backend for library management and content delivery.",
       image:
         "https://raw.githubusercontent.com/Almamu/MangaSekaiProject-Frontend/refs/heads/expo-rewrite/assets/images/mangasekai-logo.png",
+      image_fill: "object-cover",
       technologies: ["React Native", "Expo", "Laravel", "PHP"],
       links: {
         frontend:
@@ -73,6 +76,7 @@ function App() {
       description:
         "A game created for GitHub's GameOff 2022 themed 'cliché'. Based on the Spanish proverb, this action-adventure deliberately embraces Hollywood tropes like 'America saves the world' and 'you're our last hope' for a uniquely satirical experience.",
       image: "assets/images/bird.png",
+      image_fill: "object-cover",
       technologies: ["Game Development", "Pixel Art"],
       link: "https://almamu.itch.io/a-bird-in-hand-is-worth-hundreds-in-the-bush",
     },
@@ -313,7 +317,7 @@ function App() {
                 <img
                   src={project.image}
                   alt={`${project.title} Preview`}
-                  className="w-full h-48 object-cover"
+                  className={"w-full h-48 " + project.image_fill}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">
