@@ -154,30 +154,32 @@ export function App() {
                 </a>
               </p>
             </div>
-            <div className="flex gap-4 justify-center md:justify-start">
-              <span className="py-2">Get in touch with me on:</span>
-              <a
-                href="https://github.com/Almamu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 hover:text-blue-400 transition-colors"
-              >
-                <SiGithub size={24} />
-              </a>
-              <a
-                href="https://linkedin.com/in/almamu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 hover:text-blue-400 transition-colors"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href={email}
-                className="p-2 hover:text-blue-400 transition-colors"
-              >
-                <Mail size={24} />
-              </a>
+            <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+              <span className="pt-2">Get in touch with me on:</span>
+              <div className="flex justify-center md:justify-start gap-4 flex-wrap">
+                <a
+                  href="https://github.com/Almamu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 hover:text-blue-400 transition-colors"
+                >
+                  <SiGithub size={24} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/almamu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 hover:text-blue-400 transition-colors"
+                >
+                  <Linkedin size={24} />
+                </a>
+                <a
+                  href={email}
+                  className="p-2 hover:text-blue-400 transition-colors"
+                >
+                  <Mail size={24} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -284,12 +286,12 @@ export function App() {
                     {project.title}
                   </h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col md:flex-row justify-between items-center">
                     <LanguageLabelContainer>
                       {project.technologies}
                     </LanguageLabelContainer>
                     {"links" in project ? (
-                      <div className="flex gap-2">
+                      <div className="flex mt-2 md:mt-0 gap-2">
                         <a
                           href={project.links!.frontend}
                           target="_blank"
@@ -312,7 +314,7 @@ export function App() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                        className="mt-2 md:mt-0 text-blue-400 hover:text-blue-300 flex items-center gap-1"
                       >
                         View Project <ExternalLink size={16} />
                       </a>
