@@ -11,6 +11,8 @@ import {
 
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
+const email = "mailto:contact@alma.mu";
+
 function calculateAge(birthDate: Date): number {
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
@@ -33,7 +35,7 @@ function App() {
   const projects = [
     {
       id: 1,
-      title: "Linux-WallpaperEngine",
+      title: "linux-WallpaperEngine",
       description:
         "A native Linux implementation of Wallpaper Engine, bringing animated wallpapers to Linux desktop environments. Built with C++ and modern OpenGL.",
       image:
@@ -43,11 +45,11 @@ function App() {
     },
     {
       id: 2,
-      title: "EveSharp",
+      title: "EVESharp",
       description:
         "A C# implementation of EVE Online server, enabling private server development and game preservation. Features network protocol implementation and game logic.",
       image:
-        "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=800&auto=format&fit=crop&q=60",
+        "https://raw.githubusercontent.com/wiki/Almamu/EVESharp/assets/EVESharp.png",
       technologies: ["C#", ".NET", "Networking"],
       link: "https://github.com/Almamu/EVESharp",
     },
@@ -57,7 +59,7 @@ function App() {
       description:
         "A comprehensive manga reader platform split into two components: a React Native/Expo frontend for cross-platform reading, and a Laravel PHP backend for library management and content delivery.",
       image:
-        "https://images.unsplash.com/photo-1560942485-b2a11cc13456?w=800&auto=format&fit=crop&q=60",
+        "https://raw.githubusercontent.com/Almamu/MangaSekaiProject-Frontend/refs/heads/expo-rewrite/assets/images/mangasekai-logo.png",
       technologies: ["React Native", "Expo", "Laravel", "PHP"],
       links: {
         frontend:
@@ -70,8 +72,7 @@ function App() {
       title: "A Bird in Hand is Worth Hundreds in the Bush",
       description:
         "A game created for GitHub's GameOff 2022 themed 'cliché'. Based on the Spanish proverb, this action-adventure deliberately embraces Hollywood tropes like 'America saves the world' and 'you're our last hope' for a uniquely satirical experience.",
-      image:
-        "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=800&auto=format&fit=crop&q=60",
+      image: "assets/images/bird.png",
       technologies: ["Game Development", "Pixel Art"],
       link: "https://almamu.itch.io/a-bird-in-hand-is-worth-hundreds-in-the-bush",
     },
@@ -85,7 +86,7 @@ function App() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-400 flex-shrink-0">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces&auto=format"
+              src="assets/images/portrait.jpg"
               alt="Profile Picture"
               className="w-full h-full object-cover"
             />
@@ -113,7 +114,7 @@ function App() {
             </div>
             <div className="flex gap-4 justify-center md:justify-start">
               <a
-                href="https://github.com"
+                href="https://github.com/Almamu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 hover:text-blue-400 transition-colors"
@@ -121,7 +122,7 @@ function App() {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/almamu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 hover:text-blue-400 transition-colors"
@@ -129,7 +130,7 @@ function App() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href={email}
                 className="p-2 hover:text-blue-400 transition-colors"
               >
                 <Mail size={24} />
@@ -377,7 +378,7 @@ function App() {
             hello!
           </p>
           <a
-            href="mailto:your.email@example.com"
+            href={email}
             className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
           >
             <Mail size={20} />
