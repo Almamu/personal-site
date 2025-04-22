@@ -186,7 +186,7 @@ export function App() {
       </header>
 
       {/* Technical Stack Section */}
-      <section className="bg-blue-950/20 py-20">
+      <section className="bg-blue-950/20 py-10 md:py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
             <Code2 size={24} className="text-blue-400" />
@@ -238,7 +238,7 @@ export function App() {
       </section>
 
       {/* About Section */}
-      <section className="bg-gray-800/50 py-20">
+      <section className="bg-gray-800/50 py-10 md:py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
             <User className="text-blue-400" />
@@ -263,7 +263,7 @@ export function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-10 md:py-16 relative overflow-hidden">
         <ParticlesBackground className="opacity-30" />
         <div className="container mx-auto px-6 relative">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
