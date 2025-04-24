@@ -157,9 +157,9 @@ export function App() {
 
   return (
     <>
+      <ParticlesBackground className="opacity-70" />
       {/* Hero Section */}
       <header className="container mx-auto px-6 py-10 md:py-16 relative overflow-hidden">
-        <ParticlesBackground className="opacity-50" />
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-400 flex-shrink-0">
             <img
@@ -179,7 +179,7 @@ export function App() {
               <p className="text-xl md:text-2xl text-gray-300 mb-2">
                 Senior Fullstack Developer at{" "}
                 <a
-                  href="https://www.convotis.com"
+                  href="https://www.convotis.com/es/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
@@ -189,7 +189,9 @@ export function App() {
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-              <span className="pt-2">Get in touch with me on:</span>
+              <span className="pt-2 text-gray-300">
+                Get in touch with me on:
+              </span>
               <div className="flex justify-center md:justify-start gap-4 flex-wrap">
                 {socials.map((social) => (
                   <a
@@ -336,7 +338,7 @@ export function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-700 py-8">
+      <footer className="py-8">
         <div className="container mx-auto px-6 text-center text-gray-400">
           <p>© {new Date().getFullYear()} Almamu. All rights reserved.</p>
         </div>
