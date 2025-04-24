@@ -78,7 +78,7 @@ export function App() {
       title: "EVESharp",
       description:
         "A C# implementation of EVE Online server, enabling private server development and game preservation. Features network protocol implementation and game logic.",
-      image: "images/evesharp-logo.png",
+      image: "images/evesharp-logo.webp",
       image_fill: "object-contain",
       technologies: [
         <CSharp key="csharp">C#</CSharp>,
@@ -92,7 +92,7 @@ export function App() {
       title: "MangaSekaiProject",
       description:
         "A comprehensive manga reader platform split into two components: a React Native/Expo frontend for cross-platform reading, and a Laravel PHP backend for library management and content delivery.",
-      image: "images/mangasekai-logo.png",
+      image: "images/mangasekai-logo.webp",
       image_fill: "object-cover",
       technologies: [
         <ReactNative key="reactnative">React Native</ReactNative>,
@@ -116,7 +116,7 @@ export function App() {
       title: "A Bird in Hand is Worth Hundreds in the Bush",
       description:
         "A game created for GitHub's GameOff 2022 themed 'cliché'. Based on the Spanish proverb, this action-adventure deliberately embraces Hollywood tropes like 'America saves the world' and 'you're our last hope' for a uniquely satirical experience.",
-      image: "images/bird.png",
+      image: "images/bird.webp",
       image_fill: "object-cover",
       technologies: [
         <Unity key="unity">Unity</Unity>,
@@ -163,7 +163,7 @@ export function App() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-400 flex-shrink-0">
             <img
-              src="images/portrait.jpg"
+              src="images/portrait.webp"
               alt="Profile Picture"
               className="w-full h-full object-cover"
             />
