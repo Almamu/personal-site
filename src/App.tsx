@@ -62,9 +62,9 @@ export function App() {
         "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=60",
       image_fill: "object-cover",
       technologies: [
-        <CPlusPlus>C++</CPlusPlus>,
-        <OpenGL>OpenGL</OpenGL>,
-        <Linux>Linux</Linux>,
+        <CPlusPlus key="cplusplus">C++</CPlusPlus>,
+        <OpenGL key="opengl">OpenGL</OpenGL>,
+        <Linux key="linux">Linux</Linux>,
       ],
       links: [
         {
@@ -82,9 +82,9 @@ export function App() {
         "https://raw.githubusercontent.com/wiki/Almamu/EVESharp/assets/EVESharp.png",
       image_fill: "object-contain",
       technologies: [
-        <CSharp>C#</CSharp>,
-        <DotNet>.NET</DotNet>,
-        <Other>Networking</Other>,
+        <CSharp key="csharp">C#</CSharp>,
+        <DotNet key="dotnet">.NET</DotNet>,
+        <Other key="networking">Networking</Other>,
       ],
       links: [{ url: "https://github.com/Almamu/EVESharp", label: "Github" }],
     },
@@ -97,10 +97,10 @@ export function App() {
         "https://raw.githubusercontent.com/Almamu/MangaSekaiProject-Frontend/refs/heads/expo-rewrite/assets/images/mangasekai-logo.png",
       image_fill: "object-cover",
       technologies: [
-        <ReactNative>React Native</ReactNative>,
-        <Expo>Expo</Expo>,
-        <PHP>PHP 8</PHP>,
-        <Laravel>Laravel</Laravel>,
+        <ReactNative key="reactnative">React Native</ReactNative>,
+        <Expo key="expo">Expo</Expo>,
+        <PHP key="php">PHP 8</PHP>,
+        <Laravel key="laravel">Laravel</Laravel>,
       ],
       links: [
         {
@@ -121,9 +121,9 @@ export function App() {
       image: "images/bird.png",
       image_fill: "object-cover",
       technologies: [
-        <Unity>Unity</Unity>,
-        <Other>Game Development</Other>,
-        <Other>Voxel-like</Other>,
+        <Unity key="unity">Unity</Unity>,
+        <Other key="gamedev">Game Development</Other>,
+        <Other key="voxel">Voxel-like</Other>,
       ],
       links: [
         {
