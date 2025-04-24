@@ -14,6 +14,7 @@
     "@icons-pack/react-simple-icons": "^12.7.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
+    "@types/node": "^22.14.1",
     "@wroud/vite-plugin-ssg": "^5.1.2",
     "lucide-react": "^0.503.0",
     "react": "^19.1.0",
