@@ -1,7 +1,6 @@
-import { useCallback } from "react";
-import { Particles } from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 interface ParticlesBackgroundProps {
   className?: string;
@@ -10,23 +9,31 @@ interface ParticlesBackgroundProps {
 export function ParticlesBackground({
   className = "",
 }: ParticlesBackgroundProps) {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
+  const [init, setInit] = useState(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      //await loadAll(engine);
+      //await loadFull(engine);
+      await loadSlim(engine);
+      //await loadBasic(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      await container?.refresh();
-    },
-    [],
-  );
+  if (!init) {
+    return null;
+  }
 
   return (
     <Particles
       className={`absolute inset-0 ${className}`}
       id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         background: {
           color: {
@@ -58,7 +65,8 @@ export function ParticlesBackground({
           number: {
             density: {
               enable: true,
-              area: 800,
+              width: 800,
+              height: 800,
             },
             value: 80,
           },
