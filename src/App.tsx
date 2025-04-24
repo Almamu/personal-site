@@ -1,4 +1,4 @@
-import { SiGithub } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiTwitch } from "@icons-pack/react-simple-icons";
 import {
   Briefcase,
   Code2,
@@ -33,8 +33,6 @@ import { Unity } from "./components/LanguageLabels/Unity.tsx";
 import { VueJS } from "./components/LanguageLabels/VueJS.tsx";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
-const email = "mailto:contact@alma.mu";
-
 function calculateAge(birthDate: Date): number {
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
@@ -68,7 +66,12 @@ export function App() {
         <OpenGL>OpenGL</OpenGL>,
         <Linux>Linux</Linux>,
       ],
-      link: "https://github.com/Almamu/linux-wallpaperengine",
+      links: [
+        {
+          url: "https://github.com/Almamu/linux-wallpaperengine",
+          label: "Github",
+        },
+      ],
     },
     {
       id: 2,
@@ -83,7 +86,7 @@ export function App() {
         <DotNet>.NET</DotNet>,
         <Other>Networking</Other>,
       ],
-      link: "https://github.com/Almamu/EVESharp",
+      links: [{ url: "https://github.com/Almamu/EVESharp", label: "Github" }],
     },
     {
       id: 3,
@@ -99,11 +102,16 @@ export function App() {
         <PHP>PHP 8</PHP>,
         <Laravel>Laravel</Laravel>,
       ],
-      links: {
-        frontend:
-          "https://github.com/Almamu/MangaSekaiProject-Frontend/tree/expo-rewrite",
-        backend: "https://github.com/Almamu/MangaSekaiProject-Backend",
-      },
+      links: [
+        {
+          url: "https://github.com/Almamu/MangaSekaiProject-Frontend/tree/expo-rewrite",
+          label: "Frontend",
+        },
+        {
+          url: "https://github.com/Almamu/MangaSekaiProject-Backend",
+          label: "Backend",
+        },
+      ],
     },
     {
       id: 4,
@@ -113,16 +121,40 @@ export function App() {
       image: "images/bird.png",
       image_fill: "object-cover",
       technologies: [
+        <Unity>Unity</Unity>,
         <Other>Game Development</Other>,
         <Other>Voxel-like</Other>,
-        <Unity>Unity</Unity>,
       ],
-      link: "https://almamu.itch.io/a-bird-in-hand-is-worth-hundreds-in-the-bush",
+      links: [
+        {
+          url: "https://almamu.itch.io/a-bird-in-hand-is-worth-hundreds-in-the-bush",
+          label: "itch.io",
+        },
+      ],
+    },
+  ];
+
+  const socials = [
+    {
+      icon: <SiGithub size={24} />,
+      url: "https://github.com/Almamu",
+    },
+    {
+      icon: <Linkedin size={24} />,
+      url: "https://linkedin.com/in/almamu",
+    },
+    {
+      icon: <Mail size={24} />,
+      url: "mailto:contact@alma.mu",
+    },
+    {
+      icon: <SiTwitch size={24} />,
+      url: "https://twitch.tv/almamu",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <>
       {/* Hero Section */}
       <header className="container mx-auto px-6 py-10 md:py-16 relative overflow-hidden">
         <ParticlesBackground className="opacity-50" />
@@ -157,28 +189,17 @@ export function App() {
             <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
               <span className="pt-2">Get in touch with me on:</span>
               <div className="flex justify-center md:justify-start gap-4 flex-wrap">
-                <a
-                  href="https://github.com/Almamu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 hover:text-blue-400 transition-colors"
-                >
-                  <SiGithub size={24} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/almamu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 hover:text-blue-400 transition-colors"
-                >
-                  <Linkedin size={24} />
-                </a>
-                <a
-                  href={email}
-                  className="p-2 hover:text-blue-400 transition-colors"
-                >
-                  <Mail size={24} />
-                </a>
+                {socials.map((social) => (
+                  <a
+                    key={social.url}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:text-blue-400 transition-colors"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -186,7 +207,7 @@ export function App() {
       </header>
 
       {/* Technical Stack Section */}
-      <section className="bg-blue-950/20 py-10 md:py-16">
+      <section className="py-10 md:py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
             <Code2 size={24} className="text-blue-400" />
@@ -238,7 +259,7 @@ export function App() {
       </section>
 
       {/* About Section */}
-      <section className="bg-gray-800/50 py-10 md:py-16">
+      <section className="py-10 md:py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
             <User className="text-blue-400" />
@@ -290,35 +311,19 @@ export function App() {
                     <LanguageLabelContainer>
                       {project.technologies}
                     </LanguageLabelContainer>
-                    {"links" in project ? (
-                      <div className="flex mt-2 md:mt-0 gap-2">
+                    <div className="flex mt-2 md:mt-0 gap-2">
+                      {project.links.map((link) => (
                         <a
-                          href={project.links!.frontend}
+                          key={link.url}
+                          href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
                         >
-                          Frontend <ExternalLink size={16} />
+                          {link.label} <ExternalLink size={16} />
                         </a>
-                        <a
-                          href={project.links!.backend}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
-                        >
-                          Backend <ExternalLink size={16} />
-                        </a>
-                      </div>
-                    ) : (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 md:mt-0 text-blue-400 hover:text-blue-300 flex items-center gap-1"
-                      >
-                        View Project <ExternalLink size={16} />
-                      </a>
-                    )}
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -333,6 +338,6 @@ export function App() {
           <p>© {new Date().getFullYear()} Almamu. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
