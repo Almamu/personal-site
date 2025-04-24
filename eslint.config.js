@@ -8,7 +8,7 @@ import unusedImports from "eslint-plugin-unused-imports";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 export default tseslint.config(
-  { ignores: ["dist", ".vite-react-ssg-temp"] },
+  { ignores: ["dist", "dist-server", ".vite-react-ssg-temp"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
