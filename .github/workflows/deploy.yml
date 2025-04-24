@@ -3,6 +3,7 @@ name: Deploy
 permissions:
   pages: write
   id-token: write
+  contents: read
 
 on:
   push:
