@@ -78,8 +78,7 @@ export function App() {
       title: "EVESharp",
       description:
         "A C# implementation of EVE Online server, enabling private server development and game preservation. Features network protocol implementation and game logic.",
-      image:
-        "https://raw.githubusercontent.com/wiki/Almamu/EVESharp/assets/EVESharp.png",
+      image: "images/evesharp-logo.png",
       image_fill: "object-contain",
       technologies: [
         <CSharp key="csharp">C#</CSharp>,
@@ -93,8 +92,7 @@ export function App() {
       title: "MangaSekaiProject",
       description:
         "A comprehensive manga reader platform split into two components: a React Native/Expo frontend for cross-platform reading, and a Laravel PHP backend for library management and content delivery.",
-      image:
-        "https://raw.githubusercontent.com/Almamu/MangaSekaiProject-Frontend/refs/heads/expo-rewrite/assets/images/mangasekai-logo.png",
+      image: "images/mangasekai-logo.png",
       image_fill: "object-cover",
       technologies: [
         <ReactNative key="reactnative">React Native</ReactNative>,
@@ -138,18 +136,22 @@ export function App() {
     {
       icon: <SiGithub size={24} />,
       url: "https://github.com/Almamu",
+      label: "Github",
     },
     {
       icon: <Linkedin size={24} />,
       url: "https://linkedin.com/in/almamu",
+      label: "LinkedIn",
     },
     {
       icon: <Mail size={24} />,
       url: "mailto:contact@alma.mu",
+      label: "Email",
     },
     {
       icon: <SiTwitch size={24} />,
       url: "https://twitch.tv/almamu",
+      label: "Twitch",
     },
   ];
 
@@ -192,6 +194,7 @@ export function App() {
                 {socials.map((social) => (
                   <a
                     key={social.url}
+                    aria-label={social.label}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
