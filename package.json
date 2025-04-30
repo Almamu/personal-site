@@ -15,7 +15,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
     "@types/node": "^22.15.2",
-    "@wroud/vite-plugin-ssg": "^5.1.2",
+    "@wroud/vite-plugin-ssg": "^5.1.4",
     "lucide-react": "^0.503.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
