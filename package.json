@@ -40,7 +40,7 @@
     "husky": "^9.1.7",
     "postcss": "^8.4.35",
     "prettier": "^3.5.3",
-    "prettier-eslint": "^16.4.1",
+    "prettier-eslint": "^16.4.2",
     "stylelint": "^16.24.0",
     "tailwindcss": "^4.1.7",
     "typescript": "^5.5.3",
