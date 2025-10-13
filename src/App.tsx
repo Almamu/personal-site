@@ -8,29 +8,29 @@ import {
   User,
 } from "lucide-react";
 
-import { Angular } from "./components/LanguageLabels/Angular.tsx";
-import { C } from "./components/LanguageLabels/C.tsx";
-import { CloudFlare } from "./components/LanguageLabels/CloudFlare.tsx";
-import { CPlusPlus } from "./components/LanguageLabels/CPlusPlus.tsx";
-import { CSharp } from "./components/LanguageLabels/CSharp.tsx";
-import { DotNet } from "./components/LanguageLabels/DotNet.tsx";
-import { Expo } from "./components/LanguageLabels/Expo.tsx";
-import { Git } from "./components/LanguageLabels/Git.tsx";
-import { LanguageLabelContainer } from "./components/LanguageLabels/LanguageLabelContainer.tsx";
-import { Laravel } from "./components/LanguageLabels/Laravel.tsx";
-import { Linux } from "./components/LanguageLabels/Linux.tsx";
-import { NextJS } from "./components/LanguageLabels/NextJS.tsx";
-import { NodeJS } from "./components/LanguageLabels/NodeJS.tsx";
-import { OpenGL } from "./components/LanguageLabels/OpenGL.tsx";
-import { Other } from "./components/LanguageLabels/Other.tsx";
-import { PHP } from "./components/LanguageLabels/PHP.tsx";
-import { Python } from "./components/LanguageLabels/Python.tsx";
-import { React } from "./components/LanguageLabels/React.tsx";
-import { ReactNative } from "./components/LanguageLabels/ReactNative.tsx";
-import { SQL } from "./components/LanguageLabels/SQL.tsx";
-import { TypeScript } from "./components/LanguageLabels/TypeScript.tsx";
-import { Unity } from "./components/LanguageLabels/Unity.tsx";
-import { VueJS } from "./components/LanguageLabels/VueJS.tsx";
+import { Angular } from "./components/LanguageLabels/Angular";
+import { C } from "./components/LanguageLabels/C";
+import { CloudFlare } from "./components/LanguageLabels/CloudFlare";
+import { CPlusPlus } from "./components/LanguageLabels/CPlusPlus";
+import { CSharp } from "./components/LanguageLabels/CSharp";
+import { DotNet } from "./components/LanguageLabels/DotNet";
+import { Expo } from "./components/LanguageLabels/Expo";
+import { Git } from "./components/LanguageLabels/Git";
+import { LanguageLabelContainer } from "./components/LanguageLabels/LanguageLabelContainer";
+import { Laravel } from "./components/LanguageLabels/Laravel";
+import { Linux } from "./components/LanguageLabels/Linux";
+import { NextJS } from "./components/LanguageLabels/NextJS";
+import { NodeJS } from "./components/LanguageLabels/NodeJS";
+import { OpenGL } from "./components/LanguageLabels/OpenGL";
+import { Other } from "./components/LanguageLabels/Other";
+import { PHP } from "./components/LanguageLabels/PHP";
+import { Python } from "./components/LanguageLabels/Python";
+import { React } from "./components/LanguageLabels/React";
+import { ReactNative } from "./components/LanguageLabels/ReactNative";
+import { SQL } from "./components/LanguageLabels/SQL";
+import { TypeScript } from "./components/LanguageLabels/TypeScript";
+import { Unity } from "./components/LanguageLabels/Unity";
+import { VueJS } from "./components/LanguageLabels/VueJS";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
 function calculateAge(birthDate: Date): number {
@@ -164,7 +164,8 @@ export function App() {
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-400 flex-shrink-0">
             <img
               src="images/portrait.webp"
-              alt="Profile Picture"
+              alt="Profile"
+              fetchPriority="high"
               className="w-full h-full object-cover"
             />
           </div>
