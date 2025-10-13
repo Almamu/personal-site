@@ -6,7 +6,7 @@ import {
   Link,
 } from "@wroud/vite-plugin-ssg/react/components";
 
-import { App } from "./App.js";
+import { App } from "./App";
 import indexStyles from "./index.css?url";
 
 export default function Index(_props: IndexComponentProps) {
