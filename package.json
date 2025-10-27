@@ -15,7 +15,7 @@
     "@tailwindcss/postcss": "^4.1.16",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
-    "@types/node": "^22.15.3",
+    "@types/node": "^24.9.1",
     "@wroud/vite-plugin-ssg": "^5.3.0",
     "lucide-react": "^0.503.0",
     "react": "^19.1.0",
